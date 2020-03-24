@@ -87,7 +87,7 @@ Object.keys(actionMap).forEach(action => {
                 (0, _init2.default)();
                 break;
             case 'dev':
-                (0, _dev2.default)();
+                (0, _dev2.default)(_commander2.default.port);
                 break;
             case 'build':
                 (0, _build2.default)();

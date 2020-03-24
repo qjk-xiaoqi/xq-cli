@@ -58,17 +58,24 @@
 ## 项目初始化 init命令
 * 初始化git仓库，方便代码提交管理
 * 进入项目目录安装依赖
-进入项目项目目录，执行xq-cli/xqc init 完成项目的初始化
-## 项目启动
+进入项目目录，执行xq-cli/xqc init 完成项目的初始化
+## 项目启动 dev -p <port>命令
 可以让我们的项目在本地运行，使用webpack来实现项目的本地启动
 依赖分析：
 * webpack webpack-cli
-* webpack-dev-server
+* webpack-dev-server： 支持热更新
 * html-webpack-plugin: 将打包文件插入模板文件
-* open-browser-webpack-plagin
+* open-browser-webpack-plagin：项目启动后自动打开浏览器
 * vue-loader、vue-template-compiler: 解析vue
 * style-loader、css-loader、less-loader、sccs-loader: 解析style、css、sccs、less
 * ts-loader: 解析typescript
+
+编写webpack.config.js文件后，执行xq-cli dev -p <port>来启动项目。
+
+## 项目打包  build命令
+输入打包命令时，直接执行webpack(config, ()=>{})
+
+
 
 
 

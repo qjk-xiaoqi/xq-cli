@@ -79,7 +79,7 @@
                     init();
                     break;
                 case 'dev': 
-                    dev();
+                    dev(program.port);
                     break;
                 case 'build': 
                     build();

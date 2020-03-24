@@ -17,8 +17,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const config = require('./webpack.config.js');
 
 let build = () => {
-    (0, _webpack2.default)(config, (test1, test2) => {
-        console.log(_logSymbols2.default.success, _chalk2.default.green('打包完成'));
+    // 打包
+    (0, _webpack2.default)(config, function (err, stats) {
+        process.stdout.write(stats.toString({
+            colors: true,
+            modules: false,
+            children: false,
+            chunks: false,
+            chunkModules: false
+        }));
+        console.log(_logSymbols2.default.success, _chalk2.default.green(' 打包完成'));
         process.exit(1);
     });
 };
