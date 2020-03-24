@@ -38,7 +38,15 @@
 * 执行xq-cli    终端打印kkk
 
 # 处理命令行
-使用commander API 
-+ command --- 定义命令行指令
+使用commander API来设置不同的命令 
++ command --- 定义命令行指令，后面接一个name
++ alias --- 定义一个更短的命令行指令
++ description --- 描述
++ option --- 定义参数
++ action  --- 注册一个callback函数
++ parse --- 解析命令行
+
+# 项目启动
+* 先创建项目 
 
 
