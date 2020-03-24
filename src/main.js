@@ -36,8 +36,8 @@
         .action(()=>{
             switch (action) {
                 case 'create':
-                    // create(...process.argv.slice(3));
-                    console.log('hhhhh');
+                    create(...process.argv.slice(3));
+                    // create();
                     break;
                 default:
                     break;
@@ -51,6 +51,6 @@ program
 
     
 if (!process.argv.slice(2).length) {
-        program.outputHelp();
+    program.outputHelp();
 }
     

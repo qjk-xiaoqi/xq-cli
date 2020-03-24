@@ -20,8 +20,6 @@ var _downloadGitRepo = require('download-git-repo');
 
 var _downloadGitRepo2 = _interopRequireDefault(_downloadGitRepo);
 
-var _dns = require('dns');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // 文件是否存在
@@ -53,6 +51,7 @@ let promptList = [{
 
 let prompt = () => {
     return new Promise(resolve => {
+        // inquirer提供prompt函数来实现询问，其参数为数组，询问将按数组的顺序来
         _inquirer2.default.prompt(promptList).then(answer => {
             resolve(answer);
         });

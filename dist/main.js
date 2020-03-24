@@ -43,8 +43,8 @@ let actionMap = {
     _commander2.default.command(action).description(actionMap[action].description).alias(actionMap[action].alias).action(() => {
         switch (action) {
             case 'create':
-                // create(...process.argv.slice(3));
-                console.log('hhhhh');
+                (0, _create2.default)(...process.argv.slice(3));
+                // create();
                 break;
             default:
                 break;

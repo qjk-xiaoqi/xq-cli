@@ -3,13 +3,12 @@ import symbol from 'log-symbols';
 import chalk from 'chalk';
 import inquirer from 'inquirer';
 import downloadGit from 'download-git-repo';
-import { resolve } from 'dns';
 // 文件是否存在
 let isExist = async(name) => {
     return new Promise((resolve) => {
         if(fs.existsSync(name)) {
             console.log(symbol.error, chalk.red('文件夹名已被占用，请更换名字重新创建'))
-        } else{
+        }else{
             resolve();
         }
     });
@@ -37,9 +36,9 @@ let promptList = [
 ];
 
 let prompt = ()=>{
-    return  new Promise((resolve)=>{
-        inquirer
-            .prompt(promptList)
+    return new Promise((resolve)=>{
+        // inquirer提供prompt函数来实现询问，其参数为数组，询问将按数组的顺序来
+        inquirer.prompt(promptList)
             .then(answer => {
                 resolve(answer);
             })
