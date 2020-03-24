@@ -4,10 +4,11 @@
   "description": "脚手架工具",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "babel src -d dist",
+    "watch": "npm run compile -- --watch"
   },
   "bin": {
-    "xq-cli": "./bin"
+    "xq-cli": "./bin/cmd"
   },
   "keywords": [
     "脚手架"
