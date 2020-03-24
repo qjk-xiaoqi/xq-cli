@@ -3,9 +3,9 @@ import symbol from 'log-symbols';
 import chalk from 'chalk';
 
 let init = ()=>{
-    child.exec('git init', ()=> {
+    child.exec(`git init`, ()=> {
         console.log(symbol.success, chalk.green('git 初始化完成'));
-        child.exec('npm install', (error, stdout, stderr) => {
+        child.exec(`npm install`, (error, stdout, stderr) => {
             console.log(symbol.success, chalk.green(stdout));
             console.log(symbol.error, chalk.red(stderr));
             if(error !== null) {
@@ -19,7 +19,6 @@ let init = ()=>{
         },(err) => {
             console.log(err);
         });
-    })
 }
 
 module.exports = init;

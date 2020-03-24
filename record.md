@@ -47,7 +47,7 @@
 + action  --- 注册一个callback函数
 + parse --- 解析命令行
 
-# 项目启动
+# 项目思路
 脚手架支持用户4种命令：项目创建、项目初始化、项目启动、项目打包。下面一一实现
 ## 创建项目 create命令
 * 检测文件夹是否被占用
@@ -58,6 +58,20 @@
 ## 项目初始化 init命令
 * 初始化git仓库，方便代码提交管理
 * 进入项目目录安装依赖
+进入项目项目目录，执行xq-cli/xqc init 完成项目的初始化
+## 项目启动
+可以让我们的项目在本地运行，使用webpack来实现项目的本地启动
+依赖分析：
+* webpack webpack-cli
+* webpack-dev-server
+* html-webpack-plugin: 将打包文件插入模板文件
+* open-browser-webpack-plagin
+* vue-loader、vue-template-compiler: 解析vue
+* style-loader、css-loader、less-loader、sccs-loader: 解析style、css、sccs、less
+* ts-loader: 解析typescript
+
+
+
 
 
 

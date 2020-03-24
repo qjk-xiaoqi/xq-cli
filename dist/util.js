@@ -75,11 +75,15 @@ let downLoadTemplate = async (ProjectName, api) => {
 let updateJsonFile = (fileName, obj) => {
     return new Promise(resolve => {
         if (_fs2.default.existsSync(fileName)) {
+            // 读出模板下的package.json文件
             const data = _fs2.default.readFileSync(fileName).toString();
+            // 转为json对象
             let json = JSON.parse(data);
+            // 将用户输入的更新到模板package.json文件
             Object.keys(obj).forEach(key => {
-                json[key] = obj[keys];
+                json[key] = obj[key];
             });
+            // 重写模板下的package.json文件
             _fs2.default.writeFileSync(fileName, JSON.stringify(json, null, '\t'), 'utf-8');
             resolve();
         }
