@@ -1,7 +1,7 @@
 import webpack from "webpack";
 import symbol from 'log-symbols';
 import chalk from 'chalk';
-const config = require('./webpack.config.js');
+const config = require('./webpack.build.js');
 
 let build = () => {
     // 打包

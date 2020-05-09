@@ -57,6 +57,10 @@
 执行xq-cli/xqc c ProjectName就可以下载模板到本地
 ## 项目初始化 init命令
 * 初始化git仓库，方便代码提交管理
+* 创建GitHub仓库
+* 关联GitHub仓库
+* 更新package.json的repository配置
+* 提交代码到Github上
 * 进入项目目录安装依赖
 进入项目目录，执行xq-cli/xqc init 完成项目的初始化
 ## 项目启动 dev -p <port>命令

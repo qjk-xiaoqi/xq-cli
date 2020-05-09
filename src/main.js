@@ -28,6 +28,18 @@
             'xqc init'
         ],
         alias: 'i',
+        options: [
+            {
+                flags: '-u --username <port>',
+                description: 'github用户名',
+                defaultValue: ''
+            },
+            {
+                flags: '-t --token <port>',
+                description: 'github创建的token',
+                defaultValue: ''
+            }
+        ],
     },
     // 启动项目
     dev: {
@@ -76,7 +88,7 @@
                     create(...process.argv.slice(3));
                     break;
                 case 'init':
-                    init();
+                    init(program.username, program.token);
                     break;
                 case 'dev': 
                     dev(program.port);
